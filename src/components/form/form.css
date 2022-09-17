@@ -1,0 +1,56 @@
+.todo-form {
+    margin-bottom: 20px;
+}
+
+.todo-button {
+    height: 2rem;
+    width: 5rem;
+    border: 3px solid;
+    border-image: linear-gradient(
+        90deg,
+        rgb(8, 95, 182) 30%,
+        rgb(17, 255, 203) 70%
+    ) 10;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.todo-button::before,
+.todo-button::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: inherit;
+    transition: 0.5s ease;
+}
+
+.todo-button::before {
+    left: -7px;
+    top: -7px;
+    border-width: 2px 0 0 2px;
+}
+
+.todo-button::after {
+    right: -7px;
+    bottom: -7px;
+    border-width: 0 2px 2px 0;
+}
+
+.todo-button:hover::after,
+.todo-button:hover::before {
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+}
+
+.todo-button.edit {
+    border: 3px solid;
+    border-image: linear-gradient(
+        90deg,
+        rgb(157, 38, 38) 30%,
+        rgb(228, 168, 27) 70%
+    ) 10;
+}
